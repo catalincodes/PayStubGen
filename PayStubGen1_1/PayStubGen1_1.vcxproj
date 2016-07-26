@@ -146,6 +146,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="driver.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Observer.cpp" />
+    <ClCompile Include="StubEntry.cpp" />
+    <ClCompile Include="Subject.cpp" />
+    <ClCompile Include="View.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Observer.h" />
+    <ClInclude Include="StubEntry.h" />
+    <ClInclude Include="Subject.h" />
+    <ClInclude Include="View.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
