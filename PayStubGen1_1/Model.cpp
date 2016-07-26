@@ -1,14 +1,13 @@
 #include "Model.h"
-#include "ViewMainMenu.h"
 
 typedef unsigned int unint;
 Model::Model()
 {
-	this->attach(new ViewMainMenu(this));
 }
 
 Model::~Model()
 {
+	//deallocates all view objects
 	for (StubEntry* current : entryList) {
 		if (current != nullptr)
 			delete current;
@@ -117,3 +116,4 @@ void Model::removeEntry(unint i)
 		entryList[i] = nullptr;
 	}
 }
+

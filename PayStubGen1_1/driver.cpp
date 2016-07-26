@@ -1,9 +1,6 @@
 #include <iostream>
-#include "Observer.h"
-#include "Model.h"
 #include "View.h"
-#include "StubEntry.h"
-#include <fstream>
+#include "Model.h"
 
 
 
@@ -15,13 +12,9 @@ using std::cin;
 
 int main()
 {
-
-	
-	
 	Model* model = new Model();
-	Controller *c = new Controller(model);
+//	model->init();
 	
-	delete c;
 	delete model;
 	
 	/*

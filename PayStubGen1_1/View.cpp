@@ -3,9 +3,9 @@
 
 
 
-View::View(Model *m)
+View::View()
 {
-	myModel = m;
+
 }
 
 View::~View()

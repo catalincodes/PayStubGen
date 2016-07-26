@@ -1,7 +1,8 @@
 #pragma once
-#include "Subject.h"
 #include <vector>
+#include "Subject.h"
 #include "StubEntry.h"
+
 
 using std::vector;
 
@@ -21,7 +22,6 @@ public:
 	bool addEntry(unint date, unint month, unint year, unint startHr, unint startMin, unint endHr, unint endMin, double rate);
 	bool removeEntry(unint date, unint month, unint year, unint hr, unint min);
 	void removeEntry(unint i);
-
 private:
 	//private methods
 	bool addEntry(StubEntry* newEntry);
