@@ -21,9 +21,6 @@ int main()
 	Model* model = new Model();
 	Controller *c = new Controller(model);
 	
-	cout << "result = " << StubEntry::generateTimeString(10, 12, 2010, 4, 4) << endl;
-
-
 	delete c;
 	delete model;
 	
