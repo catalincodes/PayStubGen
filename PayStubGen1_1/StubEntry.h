@@ -12,20 +12,24 @@ using namespace boost::posix_time;
 using namespace boost::gregorian;
 
 using std::string;
+typedef unsigned int unint;
 
 class StubEntry
 {
 	ptime startTime;
 	ptime endTime;
+	double rate;
 public:
 	friend class boost::serialization::access;
 	StubEntry();
-	StubEntry(string, string);
+	StubEntry(string, string, double);
 	~StubEntry();
 
 	inline ptime getStartTime() { return startTime; }
 	inline ptime getEndTime() { return endTime; }
 
+	static bool validateTimeString(string inputString);
+	static string generateTimeString(unint date, unint month, unint year, unint hr, unint min);
 	template<class Archive>
 	void serialize (Archive &ar, const unsigned int version) {
 		cout << "inside the serialize function";

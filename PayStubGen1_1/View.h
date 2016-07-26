@@ -12,15 +12,11 @@ class View :
 {
 public:
 	View(Model *m);
-	~View();
+	virtual ~View();
 
-	void update() {}
-
-	Controller* makeController();
-	Controller* getController() { return myController; }
-	
+	virtual void update() = 0;
+		
 private:
 	Model* myModel;
-	Controller* myController;
 };
 

@@ -1,8 +1,10 @@
 #include "Model.h"
+#include "ViewMainMenu.h"
+
 typedef unsigned int unint;
 Model::Model()
 {
-
+	this->attach(new ViewMainMenu(this));
 }
 
 Model::~Model()
@@ -61,13 +63,10 @@ unint Model::findEntry(unint date, unint month, unint year, unint hr, unint min)
 
 bool Model::addEntry(unint date, unint month, unint year, unint startHr, unint startMin, unint endHr, unint endMin, double rate)
 {
-	
-	StubEntry* newEntry = new StubEntry();
-	/*
-	newEntry->setRate(rate);
-	newEntry->setStartTime(date, month, year, startHr, startMin);
-	newEntry->setEndTime(date, month, year, endHr, endMin);
-	*/
+	StubEntry* newEntry = new StubEntry( //creates a new StubEntry
+		StubEntry::generateTimeString(date,month, year, startHr, startMin), //generates a TimeString from the taken parameters for the start time
+		StubEntry::generateTimeString(date, month, year, endHr, endMin), // generates a TimeString from the taken parameters for the end time
+		rate); //
 	return addEntry(newEntry);
 }
 

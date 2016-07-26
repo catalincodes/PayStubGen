@@ -1,7 +1,6 @@
 #pragma once
 #include "Model.h"
 #include "View.h"
-#include "Windows.h"
 
 class View;
 class Model;
@@ -9,18 +8,12 @@ class Model;
 class Controller
 {
 public:
-	Controller(Model*, View*);
+	Controller(Model* usedModel);
 	~Controller();
-
-	HANDLE inputHandle;
-	DWORD Events;
-	DWORD EventsRead;
 
 	void run();
 
 private:
-	bool running;
 	Model* myModel;
-	View* myView;
 };
 

@@ -157,6 +157,7 @@
     <ClCompile Include="StubEntry.cpp" />
     <ClCompile Include="Subject.cpp" />
     <ClCompile Include="View.cpp" />
+    <ClCompile Include="ViewMainMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controller.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="StubEntry.h" />
     <ClInclude Include="Subject.h" />
     <ClInclude Include="View.h" />
+    <ClInclude Include="ViewMainMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

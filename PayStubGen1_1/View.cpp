@@ -5,18 +5,9 @@
 
 View::View(Model *m)
 {
-	m->attach(this);
-	this->myModel = m;
-	this->myController = makeController();
-}
-
-Controller * View::makeController()
-{
-	Controller* n = new Controller(myModel, this);
-	return n;
+	myModel = m;
 }
 
 View::~View()
 {
-	myModel->detach(this);
 }
