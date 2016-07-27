@@ -6,6 +6,7 @@
 #include <boost/serialization/access.hpp>
 #include <boost/date_time/gregorian/greg_serialize.hpp>
 #include <boost/date_time/posix_time/time_serialize.hpp>
+
 #include <string>
 
 using namespace boost::posix_time;

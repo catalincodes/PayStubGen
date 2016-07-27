@@ -1,8 +1,7 @@
 #pragma once
-#include <iostream>
-#include "Observer.h"
 #include <vector>
 #include <algorithm>
+#include "Observer.h"
 
 using std::vector;
 
